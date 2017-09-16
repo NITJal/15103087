@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class primeUptoN {
+ void isPrime(int n){
+ boolean prime[]= new boolean[n+1];
+ for(int i=0;i<n;i++)
+ prime[i]=true;
+ 
+ for(int j=2;j*j<=n;j++)
+ {
+   if(prime[j]==true)
+	{ 
+	  for(int i=j*2;i<=n;i++)
+		prime[i]=false;
+	}
+  }
+ for(int k=2;k<=n;k++)
+ {
+	if(prime[k]==true)
+	system.out.println(k);
+  }
+}
+ public static void main(String args[]){
+ system.out.println("Enter no. uptowhich prime nos. are to e printed: ");
+ Scanner sc=new Scanner(System.in)
+ int n=sc.nextInt();  
+ system.out.println("prime nos. are: ");
+ isPrime(n);
+}
